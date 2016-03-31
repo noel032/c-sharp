@@ -1,0 +1,72 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Currency_Converter_2
+{
+    class currency2
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Amount: ");
+            double a = double.Parse(Console.ReadLine());
+            Console.Write("Currency From: ");
+            string curr1 = Console.ReadLine();
+            Console.Write("Currency to: ");
+            string curr2 = Console.ReadLine();
+
+            double TempVar = 0.0d;
+            double TempVar1 = 0.0d;
+
+            if 
+                (curr1 == "BGN")
+            {
+                TempVar = a;
+            }
+
+            else if 
+                (curr1 == "GBP")
+            {
+                TempVar = a * 2.53405d;
+            }
+            else if 
+                (curr1 == "USD")
+            {
+                TempVar = a * 1.79549d;
+            }
+            else if 
+                (curr1 == "EUR")
+            {
+                TempVar = a * 1.95583d;
+            }
+
+            return TempVar;
+
+            if
+            
+            (curr2 == "BGN")
+            {
+                TemVar1 = TempVar;
+            }
+            else if 
+                (curr2 == "GBP")
+            {
+                TemVar1 = TempVar / 2.53406d;
+            }
+            else if 
+                (curr2 == "USD")
+            {
+                TemVar1 = TempVar / 1.79549d;
+            }
+            else if
+                (curr2 == "EUR")
+            {
+                TemVar1 = TempVar / 1.95583d;
+            }
+
+            Console.WriteLine("Converted amount is: "+ TempVar1 + " " + curr2);
+        }
+    }
+}
