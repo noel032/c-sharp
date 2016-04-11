@@ -1,3 +1,4 @@
+
 using System;
 
 class LiveDemo
@@ -6,12 +7,12 @@ class LiveDemo
     {
         int numbersCount = int.Parse(Console.ReadLine());
 
-        double oddMax = int.MinValue;
-        double oddMin = int.MaxValue;
+        double oddMax = -1000000000.0;
+        double oddMin = 1000000000.0;
         double oddSum = 0;
 
-        double evenMax = int.MinValue;
-        double evenMin = int.MaxValue;
+        double evenMax = -1000000000.0;
+        double evenMin = 1000000000.0;
         double evenSum = 0;
 
         for (int cnt = 1; cnt <= numbersCount; cnt++)
@@ -48,24 +49,40 @@ class LiveDemo
             }
         }
 
-        /*if ((evenMin == evenMax) && (oddMin == oddMax))
-        {
-            evenMin.ToString();
-            evenMin = "No";
-            evenMax = 0;
-            oddMin = 0;
-            oddMax = 0;
-        }*/
         
-
-
-            Console.WriteLine("OddSum={0}, OddMin={1}, OddMax={2}, EvenSum={3}, EvenMin={4}, EvenMax={5}",
-             oddSum,
-             oddMin,
-             oddMax,
-             evenSum,
-             evenMin,
-             evenMax);
-
+        if (oddMin == 1000000000.0 && evenMin == 1000000000.0)
+        {
+            Console.WriteLine("OddSum={0}, OddMin=No, OddMax=No, EvenSum={1}, EvenMin=No, EvenMax=No",
+           oddSum,
+           evenSum);
         }
+        else if (evenMin == 1000000000.0)
+        {
+            Console.WriteLine("OddSum={0}, OddMin={1}, OddMax={2}, EvenSum={3}, EvenMin=No, EvenMax=No",
+           oddSum,
+           oddMin,
+           oddMax,
+           evenSum);
+        }
+        else if (oddMin == 1000000000.0)
+        {
+            Console.WriteLine("OddSum={0}, OddMin=No, OddMax=No, EvenSum={1}, EvenMin={2}, EvenMax={3}",
+           oddSum,
+           evenSum,
+           evenMin,
+           evenMax);
+        }
+        else
+        {
+            Console.WriteLine("OddSum={0}, OddMin={1}, OddMax={2}, EvenSum={3}, EvenMin={4}, EvenMax={5}",
+            oddSum,
+            oddMin,
+            oddMax,
+            evenSum,
+            evenMin,
+            evenMax);
+        }
+   
+    }
 }
+
